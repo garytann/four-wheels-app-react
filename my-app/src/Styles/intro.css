@@ -19,9 +19,12 @@
     background:var(--mainColor)
 }
 
+.animate {
+    animation: swipeIn 1s ease-in-out;
+}
+
 .round-image{
     border-radius: 20%;
-    animation: swipeIn 1s ease-in-out;
 }
 
 .item-container{

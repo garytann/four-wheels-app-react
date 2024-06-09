@@ -1,10 +1,19 @@
 import beginner from '../assets/images/beginner.png';
 import intermediate from "../assets/images/intermediate.png"
 import advanced from "../assets/images/advanced.png"
-
 import "../Styles/intro.css";
 
+import {useEffect} from "react";
+import {animateOnScroll} from "../animation /Animation";
+// import animateOnScroll from "../animation/Animation";
+
 function Intro(){
+
+    useEffect(() => {
+        const elements = document.querySelectorAll(".item-container");
+        animateOnScroll(elements, "animate");
+    }, []);
+
     return (
         <div className="container">
             <div className="item-container">
