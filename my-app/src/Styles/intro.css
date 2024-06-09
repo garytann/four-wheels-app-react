@@ -1,0 +1,41 @@
+@keyframes swipeIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background:var(--mainColor)
+}
+
+.round-image{
+    border-radius: 20%;
+    animation: swipeIn 1s ease-in-out;
+}
+
+.item-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflowed content */
+    color: var(--textColor);
+}
+
+.text{
+    text-align: center;
+    max-width: 70%;
+}
+
