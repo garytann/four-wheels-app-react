@@ -23,11 +23,11 @@
     animation: swipeIn 1s ease-in-out;
 }
 
-.round-image{
+.roundImage{
     border-radius: 20%;
 }
 
-.item-container{
+.itemContainer{
     display: flex;
     flex-direction: column;
     gap: 15px;

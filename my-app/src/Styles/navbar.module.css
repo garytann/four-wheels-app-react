@@ -18,7 +18,7 @@ nav a:hover {
     color: var(--secondaryColor);
 }
 
-header .nav-btn{
+.navBtn{
     padding: 5px;
     cursor: pointer;
     background: transparent;
@@ -31,7 +31,7 @@ header .nav-btn{
 }
 
 @media only screen and (max-width: 768px){
-    header .nav-btn{
+    .navBtn{
         visibility: visible;
         opacity: 1;
     }
@@ -52,11 +52,11 @@ header .nav-btn{
         transition: transform 0.3s ease-in;
     }
 
-    header .responsive_nav{
+    .responsive_nav{
         transform: none;
     }
 
-    nav .nav-close-btn{
+    .navCloseBtn{
         position: absolute;
         top: 2rem;
         right: 2rem;

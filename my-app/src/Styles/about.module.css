@@ -1,0 +1,27 @@
+.aboutContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--mainColor);
+}
+.itemContainer{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    color: var(--textColor);
+    /*align-items: flex-start;*/
+}
+
+.headers{
+    text-align: left;
+}
+
+.text{
+    text-align: left;
+}
+
+.image{
+    width: 500px;
+    height: 720px;
+}

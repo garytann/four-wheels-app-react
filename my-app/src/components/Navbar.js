@@ -1,12 +1,12 @@
 import {FaBars, FaTimes} from "react-icons/fa";
 import {useRef} from "react";
-import "../Styles/navbar.css";
+import styles from "../Styles/navbar.module.css"
 function Navbar() {
 
     const navRef = useRef()
 
     const showNavBar = () => {
-        navRef.current.classList.toggle("responsive_nav");
+        navRef.current.classList.toggle(styles.responsive_nav);
     }
 
   return (
@@ -19,11 +19,11 @@ function Navbar() {
             <a href="/#">Contact</a>
             <a href="/#">Bookings</a>
 
-            <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+            <button className={`${styles.navBtn} ${styles.navCloseBtn}`} onClick={showNavBar}>
                 <FaTimes/>
             </button>
         </nav>
-        <button className="nav-btn" onClick={showNavBar}>
+        <button className={styles.navBtn} onClick={showNavBar}>
             <FaBars/>
         </button>
     </header>

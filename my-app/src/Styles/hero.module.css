@@ -4,7 +4,7 @@
 }
 
 
-.img-container {
+.imgContainer {
     background-image: url("../assets/images/hero.jpg"); /* Replace with your image path */
     background-size: cover;
     background-position: center;
@@ -12,7 +12,7 @@
     display:flex;
 }
 
-.text-container {
+.textContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +30,7 @@
     font-weight: 700; /* Change to 'normal' for regular text */
 }
 
-.start-button {
+.startButton {
     padding: 10px 20px;
     font-size: 1.5em;
     color: var(--textColor);
@@ -41,11 +41,11 @@
     transition: background-color 0.3s ease;
 }
 
-.start-button:hover {
+.startButton:hover {
     background-color: var(--mainColorLighter);
 }
 
-.btm-text {
+.btmText {
     font-size: 1.5rem;
     font-weight: 400;
     position: absolute;
@@ -62,7 +62,7 @@
         text-align:center;
         max-width: 100%;
     }
-    .text-container{
+    .textContainer{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -70,7 +70,7 @@
         padding:0;
     }
 
-    .img-container{
+    .imgContainer{
         justify-content: center;
         align-items: center;
     }
