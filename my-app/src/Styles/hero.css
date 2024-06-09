@@ -1,0 +1,77 @@
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.imgContainer {
+    background-image: url("../assets/images/hero.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 100px;
+    color:var(--textColor);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.title{
+    font-size: 8rem;
+    max-width: 400px;
+    text-align: left;
+    font-weight: 700; /* Change to 'normal' for regular text */
+}
+
+.startButton {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: var(--textColor);
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+    background-color: var(--mainColorLighter);
+}
+
+.bottomText {
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: var(--textColor);
+}
+
+@media screen and (max-width: 768px){
+    .title{
+        font-size: 4rem;
+        text-align:center;
+        max-width: 100%;
+    }
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        padding:0;
+    }
+
+    .imgContainer{
+        justify-content: center;
+        align-items: center;
+    }
+}
