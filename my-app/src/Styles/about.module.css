@@ -8,20 +8,67 @@
     flex:1;
     display:flex;
     flex-direction: column;
-    gap:10px;
+    gap:30px;
     color: var(--textColor);
-    /*align-items: flex-start;*/
+    text-align: left;
+    padding-left: 80px;
 }
 
 .headers{
-    text-align: left;
+
+}
+
+.aboutText{
+    font-size: 1.2rem;
+    font-weight: 300;
+
+}
+
+.title{
+    max-width: 300px;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .text{
-    text-align: left;
+    max-width: 500px;
 }
 
 .image{
     width: 500px;
     height: 720px;
+}
+
+.buttons{
+    display:flex;
+    gap: 15px;
+    color: var(--mainColor);
+}
+
+.button{
+    font-size: 1em;
+    background-color: var(--secondaryColor);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: var(--mainColorLighter);
+}
+
+@media screen and (max-width: 768px){
+
+    .aboutContainer{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .itemContainer{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-left:0;
+    }
+
 }

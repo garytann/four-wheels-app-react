@@ -56,6 +56,8 @@
     color: var(--textColor);
 }
 
+
+
 @media screen and (max-width: 768px){
     .title{
         font-size: 4rem;
