@@ -1,19 +1,26 @@
 // import './App.css';
 import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Intro from './components/Intro';
-import About from "./components/About";
+import {Routes, Route} from "react-router-dom";
+import Home from "./pages/Home"
+import Bookings from "./pages/Bookings"
+import Lessons from "./pages/Lessons"
+
 import "./Styles/global.css"
 
 function App() {
   return (
-    <React.Fragment>
-        <Navbar />
-        <Hero />
-        <Intro/>
-        <About/>
-    </React.Fragment>
+      <>
+      <Navbar />
+      <div>
+          <Routes>
+              <Route path="/" element = {<Home/>}/>
+              <Route path="/bookings" element = {<Bookings/>}/>
+              <Route path="/lessons" element = {<Lessons/>}/>
+          </Routes>
+      </div>
+      </>
+
   );
 }
 

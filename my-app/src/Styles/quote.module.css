@@ -1,0 +1,12 @@
+.container{
+    background-image: url("../assets/images/wheels.png"); /* Replace with your image path */
+    width: 500px; /* specify the width */
+    height: 300px; /* specify the height */
+    object-fit: cover; /* this will ensure that your image covers the whole area of the div */
+    position: absolute;
+    /*z-index: -1; !* this will ensure*/
+    /*background-size: contain;*/
+    /*background-position: center;*/
+    /*height:100vh;*/
+    /*display:flex;*/
+}
