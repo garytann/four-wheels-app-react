@@ -17,10 +17,10 @@ function Navbar() {
             <Link to="/">Logo</Link>
         </h1>
         <nav ref={navRef}>
-            <Link to="/#">About</Link>
-            <Link to="/lessons">Lessons</Link>
-            <Link to="/#">Contact</Link>
-            <Link to="/bookings">Bookings</Link>
+            <Link to="/#" onClick={showNavBar}>About</Link>
+            <Link to="/lessons" onClick={showNavBar}>Lessons</Link>
+            <Link to="/#" onClick={showNavBar}>Contact</Link>
+            <Link to="/bookings" onClick={showNavBar}>Bookings</Link>
 
             <button className={`${styles.navBtn} ${styles.navCloseBtn}`} onClick={showNavBar}>
                 <FaTimes/>
