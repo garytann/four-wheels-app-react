@@ -43,6 +43,7 @@
     display:flex;
     gap: 15px;
     color: var(--mainColor);
+    padding-bottom: 30px;
 }
 
 .button{

@@ -32,7 +32,7 @@
 
 .startButton {
     padding: 1rem 2rem;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     color: var(--textColor);
     background-color: var(--mainColor);
     border: none;
@@ -51,7 +51,10 @@
     font-size: 1.5rem;
     font-weight: 400;
     position: absolute;
-    bottom: 0;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*bottom: 0;*/
     width: 100%;
     text-align: center;
     padding: 20px;
@@ -77,5 +80,10 @@
     .imgContainer{
         justify-content: center;
         align-items: center;
+    }
+
+    .startButton{
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }

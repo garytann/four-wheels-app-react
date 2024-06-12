@@ -8,7 +8,7 @@ function Hero() {
                   SKATE WITH US
               </h1>
               <button className={styles.startButton}>
-                  Get Started
+                  LETS SKATE
               </button>
           </div>
           <p className={styles.btmText}>sports, skates & co</p>
