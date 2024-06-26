@@ -47,11 +47,12 @@
     display: flex;
     flex-direction: column;
     text-align:left;
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: 700;
     gap: 0.1rem;
     color:var(--secondaryColor);
     animation: fadeIn 2s ease-in-out;
+    -webkit-background-clip: text;
 }
 
 .textContainer span {

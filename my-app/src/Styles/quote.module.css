@@ -3,55 +3,30 @@
     100% {opacity: 1;}
 }
 
-.quoteContainer{
-    height: 100%;
-    width: 100%;
-    position:relative;
-}
-.quoteImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*.textContainer{*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    text-align: center;*/
-/*    width: 100%;*/
-/*    padding: 0 1rem;*/
-/*}*/
-.textContainer{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: top left;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    padding: 0 1rem;
-}
-
-.quote{
-    background: var(--textColor);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2rem;
-    font-weight: 300;
-    margin-top: 1rem;
-}
-
-.author{
-    background: var(--textColor);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1rem;
-    font-weight: 100;
-    margin-top: 1rem;
-}
-
 .animate {
     animation: fadeIn 2s ease-in-out;
 }
+
+.quoteContainer{
+    background-color: var(--goldColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+    color: var(--mainColor);
+
+}
+
+.quote{
+    font-size: 8rem;
+    font-weight: 700;
+    -webkit-background-clip: text;
+}
+
+@media screen and (max-width: 768px){
+    .quote{
+        font-size: 4rem;
+    }
+}
+

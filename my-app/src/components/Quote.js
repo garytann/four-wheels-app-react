@@ -12,12 +12,8 @@ function Quote (props){
     }, []);
     return (
         <>
-            <div className={styles.quoteContainer}>
-                <img className={styles.quoteImg} alt="quoteImg" src={props.quoteImg}/>
-                <div ref={quoteContainerRef} className={styles.textContainer}>
-                    <p className={styles.quote}>{props.quoteText}</p>
-                    <p className={styles.author}>{props.quoteAuthor}</p>
-                </div>
+            <div ref={quoteContainerRef} className={styles.quoteContainer}>
+                <p className={styles.quote}>{props.quote}</p>
             </div>
         </>
     );
