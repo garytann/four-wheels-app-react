@@ -8,10 +8,15 @@
 }
 
 :root{
-    --mainColor: #32373B;
+    --mainColor: #494b4b;
     --mainColorLighter: #494b4b;
     --secondaryColor: #EAEAEA;
     --goldColor: #B8B42D;
     --textColor: #eee;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
