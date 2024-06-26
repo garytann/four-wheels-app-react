@@ -16,11 +16,22 @@
     gap:20px;
     padding-top: 10px;
     padding-bottom: 30px;
-    background:var(--mainColor)
+    background:var(--goldColor)
 }
 
 .animate {
     animation: swipeIn 1s ease-in-out;
+}
+.icon{
+    color: var(--mainColor);
+
+}
+
+
+
+.iconText{
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .roundImage{
@@ -28,17 +39,46 @@
 }
 
 .itemContainer{
+    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Hide overflowed content */
-    color: var(--textColor);
+    color: var(--mainColor);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.itemContainer:hover {
+    transform: scale(1.1); /* Add this rule to scale the icon on hover */
 }
 
 .text{
-    text-align: center;
-    max-width: 70%;
+    font-size: 0.8rem;
+    max-width: 60%;
+}
+
+@media screen and (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .itemContainer{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-left:0;
+    }
+
+    .iconText{
+        font-size: 0.8rem;
+    }
+
+    .text{
+        font-size: 0.6rem;
+        max-width: 80%;
+    }
 }
 

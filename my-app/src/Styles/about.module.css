@@ -1,27 +1,143 @@
+.container{
+    padding-top: 30px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--mainColor);
+}
 .aboutContainer{
     display: flex;
+    flex-direction:column;
     justify-content: space-between;
     align-items: center;
-    background: var(--mainColor);
+    gap: 30px;
 }
-.itemContainer{
-    flex:1;
-    display:flex;
-    flex-direction: column;
-    gap:30px;
-    color: var(--textColor);
-    text-align: left;
-    padding-left: 80px;
+.aboutHeader{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--goldColor);
 }
 
-.headers{
+.aboutTitle{
+    font-size: 1.5rem;
+    font-weight: 300;
 
 }
 
 .aboutText{
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 0.9rem;
+}
 
+.text{
+    color: var(--secondaryColor);
+    text-align:center;
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
+
+.aboutButton{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: var(--mainColor);
+    font-weight: 300;
+    background-color: var(--secondaryColor);
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing :2px;
+    text-align: center;
+    animation: swipeIn 1s ease-in-out;
+}
+
+.aboutButton:hover {
+    background-color: var(--goldColor);
+}
+
+.aboutButton a {
+    text-decoration: none;
+    color: inherit; /* This will make the link have the same color as the text */
+}
+
+.programContainer{
+    padding-top: 50px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.programHeader{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--goldColor);
+}
+
+.programItems{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.programItems img{
+    width: 380px;
+    height: 380px;
+    border-radius: 20%;
+    opacity: 30%;
+}
+
+.itemContainer{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    gap:100px;
+    /*color: var(--textColor);*/
+    /*text-align: left;*/
+    /*padding-left: 80px;*/
+}
+.imageContainer {
+    position: relative;
+}
+.imageItems {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-30%);
+    color: var(--secondaryColor); /* Change the color as needed */
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:10px;
+}
+.imageButton{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: var(--goldColor);
+    font-weight: 300;
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing :2px;
+    text-align: center;
+    align-self: flex-start; /* Add this line */
+}
+
+.imageButton:hover{
+    background-color: var(--mainColorLighter);
+}
+
+.imageButton a {
+    text-decoration: none;
+    color: inherit; /* This will make the link have the same color as the text */
 }
 
 .title{
@@ -64,14 +180,18 @@
 @media screen and (max-width: 768px){
 
     .aboutContainer{
-        flex-direction: column-reverse;
+        /*flex-direction: column-reverse;*/
         gap: 20px;
     }
-    .itemContainer{
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding-left:0;
+
+    .programItems{
+        flex-direction: column;
     }
+    /*.itemContainer{*/
+    /*    text-align: center;*/
+    /*    align-items: center;*/
+    /*    justify-content: center;*/
+    /*    padding-left:0;*/
+    /*}*/
 
 }

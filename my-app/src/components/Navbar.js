@@ -17,7 +17,7 @@ function Navbar() {
             <Link to="/">Logo</Link>
         </h1>
         <nav ref={navRef}>
-            <Link to="/#" onClick={showNavBar}>About</Link>
+            <Link to="/about" onClick={showNavBar}>About</Link>
             <Link to="/lessons" onClick={showNavBar}>Lessons</Link>
             <Link to="/#" onClick={showNavBar}>Contact</Link>
             <Link to="/bookings" onClick={showNavBar}>Bookings</Link>

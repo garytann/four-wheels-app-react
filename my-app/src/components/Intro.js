@@ -1,10 +1,10 @@
-import beginner from '../assets/images/beginner.png';
-import intermediate from "../assets/images/intermediate.png"
-import advanced from "../assets/images/advanced.png"
 import styles from "../Styles/intro.module.css";
 
 import {useEffect, useRef} from "react";
 import {animateOnScroll} from "../animation /Animation";
+import { PiCertificate, PiFirstAidKit} from "react-icons/pi";
+import { GiRollerSkate } from "react-icons/gi";
+
 // import animateOnScroll from "../animation/Animation";
 
 function Intro(){
@@ -21,26 +21,39 @@ function Intro(){
     return (
         <div className={styles.container}>
             <div ref={itemContainerRef1} className={styles.itemContainer}>
-                <img src={beginner} alt="beginner" className={styles.roundImage}/>
-                <h2>Beginner</h2>
+                <div className={styles.icon}>
+                    <PiCertificate size={70}/>
+                </div>
+                <p className={styles.iconText}>
+                    Certified Coaches
+                </p>
                 <p className={styles.text}>
-                    Our beginner program is designed to help you learn the basics of skating.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
                 </p>
             </div>
 
             <div ref={itemContainerRef2} className={styles.itemContainer}>
-                <img src={intermediate} alt="beginner" className={styles.roundImage}/>
-                <h2>Intermediate</h2>
+                <div className={styles.icon}>
+                    <PiFirstAidKit size={70}/>
+                </div>
+                <p className={styles.iconText}>
+                    First-Aid Accredited
+                </p>
                 <p className={styles.text}>
-                    Our beginner program is designed to help you learn the basics of skating.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
                 </p>
             </div>
 
             <div ref={itemContainerRef3} className={styles.itemContainer}>
-                <img src={advanced} alt="beginner" className={styles.roundImage}/>
-                <h2>Advanced</h2>
+                <div className={styles.icon}>
+                    <GiRollerSkate size={70}/>
+                </div>
+                {/*<img src={advanced} alt="beginner" className={styles.roundImage}/>*/}
+                <p className={styles.iconText}>
+                    Professional Programs
+                </p>
                 <p className={styles.text}>
-                    Our beginner program is designed to help you learn the basics of skating.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
                 </p>
             </div>
         </div>

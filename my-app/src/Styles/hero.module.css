@@ -3,86 +3,77 @@
     100% {opacity: 1;}
 }
 
+@keyframes swipeIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
-.imgContainer {
+
+.heroContainer {
     background-image: url("../assets/images/hero.jpg"); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     height: 100vh;
     display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.heroItem{
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust this value to control the space between the text and the button */
 }
 
 .textContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    padding-left: 100px;
-    color:var(--textColor);
+    text-align:left;
+    font-size: 6rem;
+    font-weight: 700;
+    gap: 0.1rem;
+    color:var(--secondaryColor);
     animation: fadeIn 2s ease-in-out;
 }
 
-.title{
-    font-size: 8rem;
-    max-width: 400px;
-    text-align: left;
-    font-weight: 700; /* Change to 'normal' for regular text */
+.textContainer span {
+    margin: -15px 0;
 }
 
 .startButton {
     padding: 1rem 2rem;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: var(--textColor);
+    font-weight: 300;
     background-color: var(--mainColor);
     border: none;
-    border-radius: 6px;
+    border-radius: 35px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     letter-spacing :2px;
-
+    text-align: center;
+    animation: swipeIn 1s ease-in-out;
 }
 
 .startButton:hover {
     background-color: var(--mainColorLighter);
 }
 
-.btmText {
-    font-size: 1.5rem;
-    font-weight: 400;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    color: var(--textColor);
-}
-
-
 
 @media screen and (max-width: 768px){
-    .title{
-        font-size: 4rem;
-        text-align:center;
-        max-width: 100%;
-    }
     .textContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:center;
-        padding:0;
-    }
-
-    .imgContainer{
-        justify-content: center;
-        align-items: center;
+        font-size: 4rem;
     }
 
     .startButton{
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+        padding: 1rem 1rem;
+        font-size: 1rem;
     }
 }

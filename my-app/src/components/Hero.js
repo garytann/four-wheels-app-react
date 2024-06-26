@@ -2,16 +2,17 @@ import styles from "../Styles/hero.module.css";
 
 function Hero() {
   return (
-      <div className={styles.imgContainer}>
-          <div className={styles.textContainer}>
-              <h1 className={styles.title}>
-                  SKATE WITH US
-              </h1>
-              <button className={styles.startButton}>
-                  LETS SKATE
-              </button>
+      <div className={styles.heroContainer}>
+          <div>
+              <div className={styles.textContainer}>
+                  <span>SKATE</span>
+                  <span>WITH</span>
+                  <span>US</span>
+              </div>
           </div>
-          <p className={styles.btmText}>sports, skates & co</p>
+          <button className={styles.startButton}>
+              SKATES UP
+          </button>
       </div>
   );
 }
