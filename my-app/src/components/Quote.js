@@ -13,7 +13,7 @@ function Quote (props){
     return (
         <>
             <div ref={quoteContainerRef} className={styles.quoteContainer}>
-                <p className={styles.quote}>{props.quote}</p>
+                <h1 className={styles.quote}>{props.quote}</h1>
             </div>
         </>
     );

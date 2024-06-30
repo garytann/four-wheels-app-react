@@ -1,0 +1,127 @@
+.container{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction:column;
+    /*margin-top: 50px;*/
+    /*margin-bottom: 50px;*/
+    background-color: var(--mainColor);
+}
+
+.textContainer{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+.headers{
+    color: var(--goldColor);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.desc{
+    font-size: 0.9rem;
+    color: var(--secondaryColor);
+    max-width: 500px;
+}
+
+.priceContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    align-items: center;
+    gap: 300px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.priceBox{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    width: 600px;
+    height: 800px;
+    border-radius: 30px;
+    align-items: center;
+    background-color: var(--secondaryColor);
+    color: var(--mainColor);
+    transition: box-shadow 0.3s ease; /* Add this line */
+}
+
+.priceBox:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Add this line */
+}
+
+.priceText{
+    padding-top: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 300px;
+}
+
+.priceHeader{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.priceDesc{
+    font-size: 0.8rem;
+}
+
+.price{
+    font-size: 4rem;
+    font-weight:900;
+    font-style: italic;
+}
+
+.priceDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 1rem;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.priceBtn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: var(--textColor);
+    font-weight: 300;
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing :2px;
+    text-align: center;
+}
+
+.priceBtn:hover {
+    background-color: var(--goldColor);
+}
+
+.ptePriceGroup{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fromText{
+    padding-top: 30px;
+}

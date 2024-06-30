@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import About from "../components/About";
 import Quote from "../components/Quote";
+import Pricing from "../components/Pricing";
 
 function Home (){
     return(
@@ -13,6 +14,7 @@ function Home (){
             <Quote
             quote={"SPORTS , SKATE & CO"}
             />
+            <Pricing/>
         </React.Fragment>
     )
 }
