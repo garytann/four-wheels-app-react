@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    gap: 100px;
+    background-color: var(--mainColor);
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.headers{
+    font-size: 5rem;
+    color: var(--goldColor);
+    font-weight: 600;
+}
+
+.serviceHeader{
+    font-size:2rem;
+    color: var(--secondaryColor);
+    font-weight: 600;
+}
+
+.desc{
+    font-size: 1.5rem;
+    color: var(--secondaryColor);
+}

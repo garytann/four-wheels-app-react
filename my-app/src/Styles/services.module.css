@@ -1,0 +1,68 @@
+@keyframes shuffleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.serviceContainer{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    justify-content: flex-start; /* Align content to the top */
+    flex-wrap: wrap; /* Allow the container to wrap items */
+    padding-bottom: 50px;
+}
+
+.headers{
+    font-size: 2rem;
+    color: var(--secondaryColor);
+    font-weight: 600;
+    text-align:left;
+}
+
+.cardsList{
+    height: 200px;
+    width: 900px;
+    background-color: var(--secondaryColor);
+    border-radius: 10px;
+    /*flex: 1 1 auto; !* Allow the box to grow and shrink *!*/
+    /*margin: 10px; !* Add some space around each card *!*/
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    animation: shuffleAnimation 0.5s ease-out forwards;
+}
+
+.cardContainer{
+    width:100%;
+    height:100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:30px;
+
+}
+
+.cardText{
+    font-size: 0.8rem;
+    color: var(--mainColor);
+    align-items: flex-start;
+    text-align:left;
+}
+
+@media (max-width: 768px) {
+    .cardsList{
+        width: 600px;
+        height: 150px;
+    }
+
+    .cardText{
+        font-size: 0.6rem;
+    }
+
+}
