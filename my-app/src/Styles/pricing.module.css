@@ -126,12 +126,45 @@
     padding-top: 30px;
 }
 
+
 @media screen and (max-width: 768px){
     .priceContainer{
         flex-direction: column;
         gap: 20px;
     }
 
+
+    .price{
+        font-size: 3rem;
+    }
+
+    .priceDetails{
+        font-size: 0.8rem;
+    }
+
+    .priceBtn{
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .fromText{
+        padding-top: 10px;
+    }
+
+    .priceBox{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .priceBox{
+        width: 400px;
+    }
+
+    .priceContainer{
+        flex-direction: column;
+        gap: 20px;
+    }
 
     .price{
         font-size: 3rem;
