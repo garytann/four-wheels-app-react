@@ -13,6 +13,10 @@ function Services(props){
 
     const [selected, setSelected] = useState("GROUP"); // Default selection
 
+    const handleChange = (event, newValue) => {
+        setSelected(newValue);
+    };
+
     // Function to handle click events
     // const handleClick = (service) => {
     //     setSelected(service);
@@ -28,6 +32,16 @@ function Services(props){
     //         backgroundColor: isSelected ? "#B8B42D" : "inherit",
     //     },
     // }));
+
+    const ServiceTabs = styled(Tabs)(({ theme }) => ({
+        '.MuiTab-root': {
+            color: '#EAEAEA', // Ensures the font color is applied to each Tab
+            borderRadius: '10px', // Sets the border radius of the Tabs
+        },
+        '.Mui-selected': {
+            backgroundColor: '#B8B42D', // Sets the background color of the selected Tab
+        },
+    }));
 
     const CardButton = styled(Button)(({ theme }) => ({
         backgroundColor: "#transparent",
@@ -73,33 +87,17 @@ function Services(props){
             {/*        FREESTYLE*/}
             {/*    </ServiceButton>*/}
             {/*</Stack>*/}
-            {/*<Box sx={{ width: '100%' }}>*/}
-                <Tabs
+                <ServiceTabs
                     value={selected}
-                    onChange={(event, newValue) => setSelected(newValue)}
-                    sx={{
-                        // Custom textColor using CSS properties
-                        '.MuiTabs-indicator': {
-                            backgroundColor: 'transparent', // Custom indicator color
-                        },
-                        '.MuiTab-root': {
-                            color: '#EAEAEA', // Custom text color for all tabs
-                            borderRadius: '10px', // Adds border radius to each tab
-                            backgroundColor: 'transparent'
-                        },
-                        '.Mui-selected': {
-                            backgroundColor: '#B8B42D' // Ensures selected tab also has a transparent background
-                            // backgroundColor: isMobile ? '#B8B42D' : '#B8B42D', // Ensures selected tab also has a transparent background
-                        },
-
-                    }}
+                    onChange={handleChange}
+                    textColor="transparent"
+                    indicatorColor="transparent"
                     aria-label="services selection tabs"
                 >
                     <Tab value="GROUP" label="GROUP" sx={{fontSize: isMobile ? '1rem' : '1.4rem'}} />
-                    <Tab value="PRVIATE" label="PRIVATE" sx={{fontSize: isMobile ? '1rem' : '1.4rem'}} />
+                    <Tab value="PRIVATE" label="PRIVATE" sx={{fontSize: isMobile ? '1rem' : '1.4rem'}} />
                     <Tab value="FREESTYLE" label="FREESTYLE" sx={{fontSize: isMobile ? '1rem' : '1.4rem'}} />
-                </Tabs>
-            {/*</Box>*/}
+                </ServiceTabs>
 
             {dataToDisplay.map((item, index) => (
                 <div className={styles.cardsList} key={`${selected}-${index}`}>
