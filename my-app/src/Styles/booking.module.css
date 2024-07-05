@@ -30,3 +30,39 @@
     font-size: 1.5rem;
     color: var(--secondaryColor);
 }
+
+@media (max-width: 768px) {
+
+    .text{
+        max-width: 300px;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+
+    .serviceHeader{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .text{
+        max-width: 300px;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+
+    .serviceHeader{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+}

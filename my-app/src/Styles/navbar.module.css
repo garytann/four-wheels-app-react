@@ -6,7 +6,20 @@ header{
     padding: 0 2rem;
     background-color: var(--mainColor);
     color: var(--textColor);
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    border: none;
 }
+/*.header {*/
+/*    position: -webkit-sticky; !* Safari *!*/
+/*    position: sticky;*/
+/*    top: 0;*/
+/*    z-index: 1000;*/
+/*    background-color: var(--mainColor); !* Background color is needed to make the header visible over the content below *!*/
+/*    box-shadow: 0 2px 5px rgba(0,0,0,0.2); !* Optional: adds a shadow for better visual separation *!*/
+/*}*/
 
 nav a {
     margin: 0 2rem;

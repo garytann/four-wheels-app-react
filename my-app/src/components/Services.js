@@ -4,7 +4,9 @@ import Button from '@mui/material/Button';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { styled} from '@mui/material/styles';
+import Form from './Form';
 import useMediaQuery from "@mui/material/useMediaQuery";
+import {Snackbar, Alert} from "@mui/material";
 
 
 function Services(props){
@@ -13,9 +15,29 @@ function Services(props){
 
     const [selected, setSelected] = useState("GROUP"); // Default selection
 
+    const [currentItem, setCurrentItem] = useState({});
+
     const handleChange = (event, newValue) => {
         setSelected(newValue);
     };
+
+    const [openModal, setOpenModal] = useState(false);
+
+    const [showAlert, setShowAlert] = useState(false);
+
+    const handleShowAlert = () => {
+        setShowAlert(true);
+        setTimeout(() => setShowAlert(false), 6000); // Automatically hide the alert after 6 seconds
+    };
+
+    const handleOpenModal = (item) => {
+        setOpenModal(true);
+        setCurrentItem(item);
+    }
+
+    console.log(currentItem);
+    const handleCloseModal = () => setOpenModal(false);
+
 
     // Function to handle click events
     // const handleClick = (service) => {
@@ -55,7 +77,7 @@ function Services(props){
         height: "50%",
         borderRadius: "10px",
         color: "#B8B42D",
-        fontSize: isMobile ? '0.8rem' : '1rem',
+        fontSize: isMobile ? '0.5rem' : '1rem',
         '&:hover': {
             backgroundColor: '#494b4b',
             borderColor: '#494b4b',
@@ -76,17 +98,16 @@ function Services(props){
     return(
         <div className={styles.serviceContainer}>
             <h2 className={styles.headers}>SERVICES</h2>
-            {/*<Stack direction="row" spacing={2}>*/}
-            {/*    <ServiceButton isSelected={selected === "GROUP"} onClick={() => handleClick("GROUP")}>*/}
-            {/*        GROUP*/}
-            {/*    </ServiceButton>*/}
-            {/*    <ServiceButton isSelected={selected === "PRIVATE"} onClick={() => handleClick("PRIVATE")}>*/}
-            {/*        PRIVATE*/}
-            {/*    </ServiceButton>*/}
-            {/*    <ServiceButton isSelected={selected === "FREESTYLE"} onClick={() => handleClick("FREESTYLE")}>*/}
-            {/*        FREESTYLE*/}
-            {/*    </ServiceButton>*/}
-            {/*</Stack>*/}
+            <Form open={openModal} handleClose={handleCloseModal} data={currentItem} handleShowAlert={handleShowAlert}/>
+
+            <Snackbar open={showAlert} autoHideDuration={6000}>
+                <Alert severity="success"
+                       variant="filled"
+                       sx={{ width: '100%' }}>
+                    Submission successful!
+                </Alert>
+            </Snackbar>
+
                 <ServiceTabs
                     value={selected}
                     onChange={handleChange}
@@ -101,7 +122,7 @@ function Services(props){
 
             {dataToDisplay.map((item, index) => (
                 <div className={styles.cardsList} key={`${selected}-${index}`}>
-                    <CardButton>
+                    <CardButton onClick={() => handleOpenModal(item)}>
                         <div className={styles.cardContainer}>
                             <div className={styles.cardText}>
                                 <h1>{item.location}</h1>
@@ -109,7 +130,7 @@ function Services(props){
                                 <p>{item.schedule}</p>
                                 <span>{item.date}</span>
                             </div>
-                            <CardSmallButton>Book Now</CardSmallButton>
+                            <CardSmallButton onClick={handleOpenModal}>Book Now</CardSmallButton>
                         </div>
                     </CardButton>
                 </div>
