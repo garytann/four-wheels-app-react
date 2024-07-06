@@ -18,17 +18,17 @@ function Hero() {
             opacity: 1;
           }
         `;
-    const isMobile = useMediaQuery('(max-width:768px)');
+    const isMobile = useMediaQuery('@media (max-width:768px)');
 
     const BootstrapButton = styled(Button)({
         animation: `${swipeUp} 1s ease-in-out`,
         boxShadow: 'none',
         textTransform: 'none',
         color:'#EAEAEA',
-        fontSize: isMobile ? '1rem' : '2rem', // Reduce the font size on mobile
+        fontSize: isMobile ? '1.5rem' : '3rem', // Reduce the font size on mobile
         padding: isMobile ? '1rem 1rem' : '1rem 2rem', // Reduce the padding on mobile
         border: '1px solid',
-        borderRadius:'35px',
+        borderRadius:'20px',
         lineHeight: 1.5,
         backgroundColor: '#32373B',
         borderColor: '#494b4b',
@@ -46,8 +46,8 @@ function Hero() {
             '"Segoe UI Symbol"',
         ].join(','),
         '&:hover': {
-            backgroundColor: '#494b4b',
-            borderColor: '#494b4b',
+            backgroundColor: '#B8B42D',
+            borderColor: '#B8B42D',
             boxShadow: 'none',
         },
         '&:active': {
@@ -72,9 +72,6 @@ function Hero() {
           <BootstrapButton variant="contained">
               <Link to="/bookings">SKATES UP</Link>
           </BootstrapButton>
-          {/*<button className={styles.startButton}>*/}
-          {/*    SKATES UP*/}
-          {/*</button>*/}
       </div>
   );
 }

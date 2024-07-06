@@ -14,8 +14,7 @@ function Form({ open, handleClose, data, handleShowAlert}) {
     const [email, setEmail] = useState('');
     const [pax, setPax] = useState('');
 
-    const isMobile = useMediaQuery('(max-width:600px)');
-
+    const isMobile = useMediaQuery('@media (max-width:768px)');
     const boxStyle = {
         position: 'absolute',
         top: '50%',

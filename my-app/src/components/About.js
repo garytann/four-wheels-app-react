@@ -4,7 +4,39 @@ import privateImg from "../assets/images/private.jpg"
 import freestyleImg from "../assets/images/freestyle.jpg"
 import {Link} from "react-router-dom";
 
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 function About() {
+
+    const isMobile = useMediaQuery('@media (max-width:768px)');
+
+    const BootstrapButton = styled(Button)({
+        boxShadow: 'none',
+        textTransform: 'none',
+        color:'#494b4b',
+        fontSize: isMobile ? '1rem' : '1.2rem', // Reduce the font size on mobile
+        padding: isMobile ? '1rem 1rem' : '1rem 2rem', // Reduce the padding on mobile
+        border: '1px solid',
+        borderRadius:'20px',
+        lineHeight: 1.5,
+        backgroundColor: '#EAEAEA',
+        borderColor: '#EAEAEA',
+        '&:hover': {
+            backgroundColor: '#B8B42D',
+            borderColor: '#B8B42D',
+            boxShadow: 'none',
+        },
+        '&:active': {
+            boxShadow: 'none',
+            backgroundColor: '#B8B42D',
+            borderColor: '#B8B42D',
+        },
+        '&:focus': {
+            boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+        },
+    });
   return (
       <>
           <div className={styles.container}>
@@ -20,9 +52,9 @@ function About() {
                       </p>
                   </div>
 
-                  <button className={styles.aboutButton}>
+                  <BootstrapButton>
                       <Link to="/about">Learn More</Link>
-                  </button>
+                  </BootstrapButton>
               </div>
 
               <div className={styles.programContainer}>
@@ -35,9 +67,9 @@ function About() {
                                   <h3>GROUP LESSON</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                       incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
-                                  <button className={styles.imageButton}>
+                                  <BootstrapButton className={styles.imageButton}>
                                       <Link to="/bookings">Book Now</Link>
-                                  </button>
+                                  </BootstrapButton>
                               </div>
                           </div>
                           <div className={styles.imageContainer}>
@@ -46,9 +78,9 @@ function About() {
                                   <h3>PRIVATE LESSON</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                       incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
-                                  <button className={styles.imageButton}>
+                                  <BootstrapButton className={styles.imageButton}>
                                       <Link to="/bookings">Book Now</Link>
-                                  </button>
+                                  </BootstrapButton>
                               </div>
                           </div>
                           <div className={styles.imageContainer}>
@@ -57,9 +89,9 @@ function About() {
                                   <h3>FREESTYLE LESSON</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                       incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
-                                  <button className={styles.imageButton}>
+                                  <BootstrapButton className={styles.imageButton}>
                                       <Link to="/bookings">Book Now</Link>
-                                  </button>
+                                  </BootstrapButton>
                               </div>
                           </div>
                       </div>
@@ -67,30 +99,6 @@ function About() {
               </div>
           </div>
       </>
-      // <div className={styles.aboutContainer}>
-      //     <div className={styles.itemContainer}>
-      //         <div className={styles.headers}>
-      //             <p className={styles.aboutText}>About Us</p>
-      //             <h2 className={styles.title}>
-      //                 Individual & Group Coaching
-      //             </h2>
-      //         </div>
-      //         <p className={styles.text}>
-      //             We offer individual and group coaching for all ages and levels. Our experienced coaches will help you to improve your skills and reach your goals.
-    //             We want our students to feel awesome and unique but at the same time, safe while learning!
-    //         </p>
-    //
-    //         <div className={styles.buttons}>
-    //             <button className={styles.button}>
-    //                 Lessons & Programs
-    //             </button>
-    //             <button className={styles.button}>
-    //                 Our coaches
-    //             </button>
-    //         </div>
-    //     </div>
-    //     <img className={styles.image} src={about} alt="About Us"/>
-    // </div>
   );
 }
 

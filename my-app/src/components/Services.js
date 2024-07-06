@@ -11,8 +11,7 @@ import {Snackbar, Alert} from "@mui/material";
 
 function Services(props){
 
-    const isMobile = useMediaQuery('(max-width:768px)');
-
+    const isMobile = useMediaQuery('@media (max-width:768px)');
     const [selected, setSelected] = useState("GROUP"); // Default selection
 
     const [currentItem, setCurrentItem] = useState({});

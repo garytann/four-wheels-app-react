@@ -8,13 +8,13 @@
 }
 
 .quoteContainer{
-    background-color: var(--goldColor);
+    background-color: var(--mainColor);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
     flex-direction: row;
-    color: var(--mainColor);
+    color: var(--secondaryColor);
 
 }
 
