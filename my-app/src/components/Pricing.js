@@ -1,8 +1,41 @@
 import styles from "../Styles/pricing.module.css";
 import { FaCircleCheck } from "react-icons/fa6";
+import {styled} from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import {Link} from "react-router-dom";
 
 
 function Pricing (){
+
+    const isMobile = useMediaQuery('@media (max-width:768px)');
+
+    const BootstrapButton = styled(Button)({
+        boxShadow: 'none',
+        textTransform: 'none',
+        display: 'inline-block',
+        minHeight: 0,
+        minWidth: 0,
+        color:'#EAEAEA',
+        fontSize: isMobile ? '1rem' : '1.2rem', // Reduce the font size on mobile
+        padding: isMobile ? '1rem 1rem' : '1rem 2rem', // Reduce the padding on mobile
+        border: '1px solid',
+        borderRadius:'20px',
+        textAlign: 'center',
+        lineHeight: 1.5,
+        backgroundColor: '#494b4b',
+        borderColor: '#494b4b',
+        '&:hover': {
+            backgroundColor: '#B8B42D',
+            borderColor: '#B8B42D',
+            boxShadow: 'none',
+        },
+        '&:active': {
+            boxShadow: 'none',
+            backgroundColor: '#B8B42D',
+            borderColor: '#B8B42D',
+        },
+    });
     return(
         <>
             <div className={styles.container}>
@@ -51,9 +84,9 @@ function Pricing (){
                                     <p>Professional Instructor</p>
                                 </div>
                             </div>
-                            <button className={styles.priceBtn}>
-                                <a href="/bookings">Book Now</a>
-                            </button>
+                            <BootstrapButton variant="contained" component={Link} to="/bookings">
+                                Book Now
+                            </BootstrapButton>
                         </div>
                     </div>
 
@@ -93,9 +126,9 @@ function Pricing (){
                                     <p>Professional Instructor</p>
                                 </div>
                             </div>
-                            <button className={styles.priceBtn}>
-                                <a href="/bookings">Book Now</a>
-                            </button>
+                            <BootstrapButton variant="contained" component={Link} to="/bookings">
+                                Book Now
+                            </BootstrapButton>
                         </div>
                     </div>
 

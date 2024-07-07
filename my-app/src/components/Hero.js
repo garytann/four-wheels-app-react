@@ -55,9 +55,6 @@ function Hero() {
             backgroundColor: '#B8B42D',
             borderColor: '#B8B42D',
         },
-        '&:focus': {
-            boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-        },
     });
 
   return (
@@ -69,8 +66,8 @@ function Hero() {
                   <span>US</span>
               </div>
           </div>
-          <BootstrapButton variant="contained">
-              <Link to="/bookings">SKATES UP</Link>
+          <BootstrapButton variant="contained" component={Link} to="/bookings">
+              Get Started
           </BootstrapButton>
       </div>
   );

@@ -33,9 +33,6 @@ function About() {
             backgroundColor: '#B8B42D',
             borderColor: '#B8B42D',
         },
-        '&:focus': {
-            boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-        },
     });
   return (
       <>
@@ -52,8 +49,8 @@ function About() {
                       </p>
                   </div>
 
-                  <BootstrapButton>
-                      <Link to="/about">Learn More</Link>
+                  <BootstrapButton variant="contained" component={Link} to="/about">
+                      Learn More
                   </BootstrapButton>
               </div>
 
@@ -67,8 +64,8 @@ function About() {
                                   <h3>GROUP LESSON</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                       incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
-                                  <BootstrapButton className={styles.imageButton}>
-                                      <Link to="/bookings">Book Now</Link>
+                                  <BootstrapButton className={styles.imageButton} variant="contained" component={Link} to="/bookings">
+                                      Book Now
                                   </BootstrapButton>
                               </div>
                           </div>
@@ -78,8 +75,8 @@ function About() {
                                   <h3>PRIVATE LESSON</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                       incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
-                                  <BootstrapButton className={styles.imageButton}>
-                                      <Link to="/bookings">Book Now</Link>
+                                  <BootstrapButton className={styles.imageButton} variant="contained" component={Link} to="/bookings">
+                                      Book Now
                                   </BootstrapButton>
                               </div>
                           </div>
@@ -89,8 +86,8 @@ function About() {
                                   <h3>FREESTYLE LESSON</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                       incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
-                                  <BootstrapButton className={styles.imageButton}>
-                                      <Link to="/bookings">Book Now</Link>
+                                  <BootstrapButton className={styles.imageButton} variant="contained" component={Link} to="/bookings">
+                                      Book Now
                                   </BootstrapButton>
                               </div>
                           </div>
