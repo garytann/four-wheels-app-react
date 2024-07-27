@@ -18,15 +18,19 @@ function Hero() {
             opacity: 1;
           }
         `;
-    const isMobile = useMediaQuery('@media (max-width:768px)');
+
+    const isMobile = useMediaQuery('@media (min-width:600px)');
+    const isTablet = useMediaQuery('@media (min-width:768px) and (max-width:1199px)');
 
     const BootstrapButton = styled(Button)({
         animation: `${swipeUp} 1s ease-in-out`,
         boxShadow: 'none',
         textTransform: 'none',
         color:'#EAEAEA',
-        fontSize: isMobile ? '1.5rem' : '3rem', // Reduce the font size on mobile
-        padding: isMobile ? '1rem 1rem' : '1rem 2rem', // Reduce the padding on mobile
+        fontSize: isMobile ? '1.5rem' : isTablet ? '1.75rem' : '2rem',
+        padding: isMobile ? '1rem 1rem' : isTablet ? '1rem 1rem' : '1rem 1rem',
+        // fontSize: isMobile ? '1.5rem' : '2rem', // Reduce the font size on mobile
+        // padding: isMobile ? '1rem 1rem' : '1rem 2rem', // Reduce the padding on mobile
         border: '1px solid',
         borderRadius:'20px',
         lineHeight: 1.5,
@@ -63,7 +67,7 @@ function Hero() {
               <div className={styles.textContainer}>
                   <span>SKATE</span>
                   <span>WITH</span>
-                  <span>US</span>
+                  <span>US.</span>
               </div>
           </div>
           <BootstrapButton variant="contained" component={Link} to="/bookings">

@@ -22,7 +22,7 @@ function Intro(){
         <div className={styles.container}>
             <div ref={itemContainerRef1} className={styles.itemContainer}>
                 <div className={styles.icon}>
-                    <PiCertificate size={70}/>
+                    <PiCertificate/>
                 </div>
                 <p className={styles.iconText}>
                     Certified Coaches
@@ -34,7 +34,7 @@ function Intro(){
 
             <div ref={itemContainerRef2} className={styles.itemContainer}>
                 <div className={styles.icon}>
-                    <PiFirstAidKit size={70}/>
+                    <PiFirstAidKit/>
                 </div>
                 <p className={styles.iconText}>
                     First-Aid Accredited
@@ -46,7 +46,7 @@ function Intro(){
 
             <div ref={itemContainerRef3} className={styles.itemContainer}>
                 <div className={styles.icon}>
-                    <GiRollerSkate size={70}/>
+                    <GiRollerSkate/>
                 </div>
                 {/*<img src={advanced} alt="beginner" className={styles.roundImage}/>*/}
                 <p className={styles.iconText}>

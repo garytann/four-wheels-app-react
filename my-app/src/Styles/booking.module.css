@@ -49,6 +49,79 @@
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .text{
+        max-width: 300px;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+
+    .serviceHeader{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .text{
+        max-width: 400px;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+
+    .serviceHeader{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1.2rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    .text{
+        max-width: 400px;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+
+    .serviceHeader{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    .text{
+        max-width: 400px;
+    }
+    .headers{
+        font-size: 4rem;
+    }
+
+    .serviceHeader{
+        font-size: 1.75rem;
+    }
+
+    .desc{
+        font-size: 1.2rem;
+    }
+}
+
+
+
 @media (max-width: 600px) {
 
     .text{

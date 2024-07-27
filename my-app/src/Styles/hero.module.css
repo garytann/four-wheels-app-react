@@ -59,33 +59,37 @@
     margin: -15px 0;
 }
 
-.startButton {
-    padding: 1rem 2rem;
-    font-size: 2rem;
-    color: var(--textColor);
-    font-weight: 300;
-    background-color: var(--mainColor);
-    border: none;
-    border-radius: 35px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    letter-spacing :2px;
-    text-align: center;
-    animation: swipeIn 1s ease-in-out;
-}
-
-.startButton:hover {
-    background-color: var(--mainColorLighter);
-}
-
-
-@media screen and (max-width: 768px){
-    .textContainer{
-        font-size: 4rem;
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+    .textContainer {
+        font-size: 5rem; /* Adjusted for extra small devices */
     }
+}
 
-    .startButton{
-        padding: 1rem 1rem;
-        font-size: 1rem;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+    .textContainer {
+        font-size: 5rem; /* Adjusted for extra small devices */
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+    .textContainer {
+        font-size: 6rem; /* Adjusted for small devices */
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    .textContainer {
+        font-size: 7rem; /* Adjusted for small devices */
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    .textContainer {
+        font-size: 8rem; /* Adjusted for small devices */
     }
 }

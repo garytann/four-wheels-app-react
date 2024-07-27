@@ -23,7 +23,6 @@
 .aboutTitle{
     font-size: 1.5rem;
     font-weight: 300;
-
 }
 
 .aboutText{
@@ -32,11 +31,11 @@
 
 .text{
     color: var(--secondaryColor);
+    justify-content: space-between;
     text-align:center;
     display: flex;
     flex-direction:column;
     gap: 20px;
-    max-width: 500px;
 }
 
 .aboutButton{
@@ -109,15 +108,16 @@
 .imageItems {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 45%;
     transform: translateY(-30%);
     color: var(--secondaryColor); /* Change the color as needed */
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap:10px;
+    gap:20px;
 }
+
 .imageButton{
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -142,19 +142,15 @@
     color: inherit; /* This will make the link have the same color as the text */
 }
 
+/*.image {*/
+/*    width: 400px; !* Adjust the width as needed *!*/
+/*    height: 700px; !* Maintain aspect ratio *!*/
+/*}*/
+
 .title{
     max-width: 300px;
     font-size: 2rem;
     font-weight: 700;
-}
-
-/*.text{*/
-/*    max-width: 500px;*/
-/*}*/
-
-.image{
-    width: 500px;
-    height: 720px;
 }
 
 .buttons{
@@ -179,21 +175,203 @@
     background-color: var(--mainColorLighter);
 }
 
-@media screen and (max-width: 768px){
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
 
     .aboutContainer{
         /*flex-direction: column-reverse;*/
         gap: 20px;
     }
 
+    .aboutHeader{
+        font-size: 1.2rem;
+    }
+
+    .aboutTitle{
+        font-size: 1.5rem;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .aboutText{
+        font-size: 1rem;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
     .programItems{
         flex-direction: column;
     }
-    /*.itemContainer{*/
-    /*    text-align: center;*/
-    /*    align-items: center;*/
-    /*    justify-content: center;*/
-    /*    padding-left:0;*/
-    /*}*/
+
+    .programHeader{
+        font-size: 1.2rem;
+    }
 
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+
+    .aboutContainer{
+        /*flex-direction: column-reverse;*/
+        gap: 20px;
+    }
+
+    .aboutHeader{
+        font-size: 1.2rem;
+    }
+
+    .aboutTitle{
+        font-size: 1.5rem;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .aboutText{
+        font-size: 1rem;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .programItems{
+        flex-direction: column;
+    }
+
+    .programHeader{
+        font-size: 1.2rem;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+    .aboutContainer{
+        /*flex-direction: column-reverse;*/
+        gap: 20px;
+    }
+
+    .aboutHeader{
+        font-size: 1.4rem;
+    }
+
+    .aboutTitle{
+        font-size: 1.75rem;
+        max-width: 45%;
+        margin: 0 auto;
+    }
+
+    .aboutText{
+        font-size: 1.2rem;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .programItems{
+        flex-direction: column;
+    }
+
+    .programHeader{
+        font-size: 1.4rem;
+    }
+
+    .programItems img{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    .aboutContainer{
+        /*flex-direction: column-reverse;*/
+        gap: 20px;
+    }
+
+    .aboutHeader{
+        font-size: 1.5rem;
+    }
+
+    .aboutTitle{
+        font-size: 2rem;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .aboutText{
+        font-size: 1.4rem;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .programItems{
+        flex-direction: row;
+    }
+
+    .programHeader{
+        font-size: 1.4rem;
+    }
+
+    .programItems{
+        gap: 50px;
+    }
+
+    .programItems img{
+        width: 280px;
+        height: 280px;
+    }
+
+    .imageItems{
+        font-size: 1rem;
+        top: 35%;
+        gap: 10px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    .aboutContainer{
+        /*flex-direction: column-reverse;*/
+        gap: 20px;
+    }
+
+    .aboutHeader{
+        font-size: 1.5rem;
+    }
+
+    .aboutTitle{
+        font-size: 2.2rem;
+        max-width: 45%;
+        margin: 0 auto;
+    }
+
+    .aboutText{
+        font-size: 1.75rem;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .programItems{
+        flex-direction: row;
+    }
+
+    .programHeader{
+        font-size: 1.5rem;
+    }
+
+    .programItems{
+        gap: 70px;
+    }
+
+    .programItems img{
+        width: 330px;
+        height: 330px;
+    }
+
+    .imageItems{
+        font-size: 1.1rem;
+        top: 35%;
+        gap: 15px;
+    }
+
+}
+
+

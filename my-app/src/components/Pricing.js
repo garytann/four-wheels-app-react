@@ -9,6 +9,7 @@ import {Link} from "react-router-dom";
 function Pricing (){
 
     const isMobile = useMediaQuery('@media (max-width:768px)');
+    const isTablet = useMediaQuery('@media (min-width:768px) and (max-width:1199px)');
 
     const BootstrapButton = styled(Button)({
         boxShadow: 'none',
@@ -17,14 +18,29 @@ function Pricing (){
         minHeight: 0,
         minWidth: 0,
         color:'#EAEAEA',
-        fontSize: isMobile ? '1rem' : '1.2rem', // Reduce the font size on mobile
-        padding: isMobile ? '1rem 1rem' : '1rem 2rem', // Reduce the padding on mobile
+        fontSize: isMobile ? '1rem' : isTablet ? '1.25rem' : '1.5rem',
+        padding: isMobile ? '1rem 1rem' : isTablet ? '1rem 1rem' : '1rem 1rem',
+        // fontSize: isMobile ? '1rem' : '1.2rem', // Reduce the font size on mobile
+        // padding: isMobile ? '1rem 1rem' : '1rem 2rem', // Reduce the padding on mobile
         border: '1px solid',
         borderRadius:'20px',
         textAlign: 'center',
         lineHeight: 1.5,
         backgroundColor: '#494b4b',
         borderColor: '#494b4b',
+        fontFamily: [
+            'Poppins',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"',
+        ].join(','),
         '&:hover': {
             backgroundColor: '#B8B42D',
             borderColor: '#B8B42D',
