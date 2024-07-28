@@ -55,31 +55,15 @@
     text-align:left;
 }
 
-@media (max-width: 768px) {
+ /*Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
     .cardsList{
-        width: 600px;
+        width: 500px;
         height: 150px;
     }
 
     .cardText{
         font-size: 0.6rem;
-    }
-
-    .headers{
-        font-size: 1rem;
-
-    }
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .cardsList{
-        width: 670px;
-        height: 150px;
-    }
-
-    .cardText{
-        font-size: 0.75rem;
     }
 
     .headers{
@@ -88,73 +72,10 @@
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
     .cardsList{
-        width: 800px;
-        height: 170px;
-    }
-
-    .cardText{
-        font-size: 0.9rem;
-    }
-
-    .headers{
-        font-size: 2rem;
-
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .cardsList{
-        width: 800px;
-        height: 170px;
-    }
-
-    .cardText{
-        font-size: 0.9rem;
-    }
-
-    .headers{
-        font-size: 2rem;
-
-    }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 1440px) {
-    .cardsList{
-        width: 1000px;
-        height: 220px;
-    }
-
-    .cardText{
-        font-size: 1rem;
-    }
-
-    .headers{
-        font-size: 2rem;
-
-    }
-}
-
-@media screen and (min-width: 1441px) {
-    .cardsList{
-        width: 1000px;
-        height: 220px;
-    }
-
-    .cardText{
-        font-size: 1rem;
-    }
-
-    .headers{
-        font-size: 2rem;
-
-    }
-}
-
-@media (max-width: 600px) {
-    .cardsList{
-        width: 400px;
+        width: 500px;
         height: 150px;
     }
 
@@ -162,4 +83,60 @@
         font-size: 0.6rem;
     }
 
+    .headers{
+        font-size: 1.2rem;
+
+    }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+    .cardsList{
+        width: 670px;
+        height: 150px;
+    }
+
+    .cardText{
+        font-size: 0.7rem;
+    }
+
+    .headers{
+        font-size: 1.4rem;
+
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    .cardsList{
+        width: 800px;
+        height: 180px;
+    }
+
+    .cardText{
+        font-size: 0.8rem;
+    }
+
+    .headers{
+        font-size: 1.5rem;
+
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    .cardsList{
+        width: 900px;
+        height: 200px;
+    }
+
+    .cardText{
+        font-size: 0.9rem;
+    }
+
+    .headers{
+        font-size: 1.75rem;
+
+    }
+}
+

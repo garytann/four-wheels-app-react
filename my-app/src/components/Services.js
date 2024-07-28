@@ -11,7 +11,8 @@ import {Snackbar, Alert} from "@mui/material";
 
 function Services(props){
 
-    const isMobile = useMediaQuery('@media (max-width:768px)');
+    const isMobile = useMediaQuery('@media (max-width:600px)');
+    const isTablet = useMediaQuery('@media (min-width:768px) and (max-width:1199px)');
     const [selected, setSelected] = useState("GROUP"); // Default selection
 
     const [currentItem, setCurrentItem] = useState({});
@@ -38,22 +39,6 @@ function Services(props){
     const handleCloseModal = () => setOpenModal(false);
 
 
-    // Function to handle click events
-    // const handleClick = (service) => {
-    //     setSelected(service);
-    // };
-    //
-    // const ServiceButton = styled(Button)(({ theme, isSelected }) => ({
-    //     color: '#EAEAEA',
-    //     fontSize: isMobile ? '0.8rem' : '1.4rem',
-    //     transition: "background-color 0.3s ease",
-    //     borderRadius: isSelected ? "10px" : "1px",
-    //     backgroundColor: isSelected ? "#B8B42D" : "inherit",
-    //     '&:hover': {
-    //         backgroundColor: isSelected ? "#B8B42D" : "inherit",
-    //     },
-    // }));
-
     const ServiceTabs = styled(Tabs)(({ theme }) => ({
         '.MuiTab-root': {
             color: '#EAEAEA', // Ensures the font color is applied to each Tab
@@ -76,7 +61,8 @@ function Services(props){
         height: "50%",
         borderRadius: "10px",
         color: "#B8B42D",
-        fontSize: isMobile ? '0.5rem' : '1rem',
+        fontSize: isMobile ? '0.6rem' : isTablet ? '0.8rem' : '1rem',
+        padding: isMobile ? '0.5rem 0.5rem' : isTablet ? '0.75rem 0.75rem' : '1rem 1rem',
         '&:hover': {
             backgroundColor: '#494b4b',
             borderColor: '#494b4b',
