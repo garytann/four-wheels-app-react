@@ -42,7 +42,7 @@ function Bookings (){
         const fetchGroupData = async () => {
             try {
                 const response = await fetch(
-                    `http://127.0.0.1:9000/api/v1/lessons/group`
+                    `http://${process.env.REACT_APP_HOST}:9000/api/v1/lessons/group`
                 );
                 if (!response.ok) {
                     throw new Error(`HTTP error: Status ${response.status}`);

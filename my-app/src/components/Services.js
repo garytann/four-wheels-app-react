@@ -80,19 +80,6 @@ function Services(props){
         dataToDisplay = props.groupData|| [];
     }
 
-    // // Log the data and its type
-    // useEffect(() => {
-    //     console.log("services groupData:", props.groupData?.data);
-    //     console.log("Type of groupData:", typeof props.groupData?.data);
-    //
-    //     console.log("services pteData:", props.pteData);
-    //     console.log("Type of pteData:", typeof props.pteData);
-    //
-    //     console.log("services fsData:", props.fsData);
-    //     console.log("Type of fsData:", typeof props.fsData);
-    // }, [props.groupData, props.pteData, props.fsData]);
-
-
     return(
         <div className={styles.serviceContainer}>
             <h2 className={styles.headers}>SERVICES</h2>
@@ -118,21 +105,6 @@ function Services(props){
                     <Tab value="FREESTYLE" label="FREESTYLE" sx={{fontSize: isMobile ? '1rem' : '1.4rem'}} />
                 </ServiceTabs>
 
-            {/*{dataToDisplay.map((item, index) => (*/}
-            {/*    <div className={styles.cardsList} key={`${selected}-${index}`}>*/}
-            {/*        <CardButton onClick={() => handleOpenModal(item)}>*/}
-            {/*            <div className={styles.cardContainer}>*/}
-            {/*                <div className={styles.cardText}>*/}
-            {/*                    <h1>{item.location}</h1>*/}
-            {/*                    <p>{item.timing}</p>*/}
-            {/*                    /!*<p>{item.schedule}</p>*!/*/}
-            {/*                    <span>{item.lesson_date}</span>*/}
-            {/*                </div>*/}
-            {/*                <CardSmallButton onClick={handleOpenModal}>Book Now</CardSmallButton>*/}
-            {/*            </div>*/}
-            {/*        </CardButton>*/}
-            {/*    </div>*/}
-            {/*))}*/}
             {dataToDisplay.length > 0 ? (
                 dataToDisplay.map((item, index) => (
                     <div className={styles.cardsList} key={`${selected}-${index}`}>

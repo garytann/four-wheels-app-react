@@ -43,7 +43,7 @@ function Form({ open, handleClose, data, handleShowAlert}) {
 
     const createBookingData = async (bookingData) => {
         try {
-            const response = await fetch('http://localhost:9000/api/v1/bookings/', {
+            const response = await fetch(`http://${process.env.REACT_APP_HOST}:9000/api/v1/bookings/`, {
                 method: 'POST',
                 headers :{
                     'Content-Type': 'application/json',
@@ -79,11 +79,13 @@ function Form({ open, handleClose, data, handleShowAlert}) {
 
     const handleContactChange = (e) => {
         const value = e.target.value;
-        if (/^\d*$/.test(value)) {
+        if (/^\d*$/.test(value) && value.length <= 8) {
             setContact(value);
             setContactError('');
-        } else {
+        } else if (!/^\d*$/.test(value)) {
             setContactError('Contact must be a numerical value');
+        } else {
+            setContactError('Contact cannot exceed 8 numerical characters');
         }
     };
 
