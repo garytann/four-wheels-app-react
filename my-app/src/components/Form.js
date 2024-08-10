@@ -3,11 +3,6 @@ import { Modal, Box, TextField, Button, Select, MenuItem, FormControl, InputLabe
 import { styled} from '@mui/material/styles';
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-
-
-
-
-
 function Form({ open, handleClose, data, handleShowAlert}) {
     const [name, setName] = useState('');
     const [contact, setContact] = useState('');
