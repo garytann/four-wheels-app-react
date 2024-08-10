@@ -35,7 +35,7 @@ function Services(props){
         setCurrentItem(item);
     }
 
-    console.log(currentItem);
+    // console.log(currentItem);
     const handleCloseModal = () => setOpenModal(false);
 
 

@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import { Modal, Box, TextField, Button, Select, MenuItem, FormControl, InputLabel} from '@mui/material';
+import { Modal, Box, TextField, Button, FormControl, InputLabel} from '@mui/material';
 import { styled} from '@mui/material/styles';
 import useMediaQuery from "@mui/material/useMediaQuery";
+import ParticipantCounter from "./ParticipationCounter";
+
+
 
 function Form({ open, handleClose, data, handleShowAlert}) {
     const [name, setName] = useState('');
     const [contact, setContact] = useState('');
     const [email, setEmail] = useState('');
-    const [pax, setPax] = useState('');
+    const [pax, setPax] = useState(1);
+    const [emailError, setEmailError] = useState('');
 
     const isMobile = useMediaQuery('@media (max-width:768px)');
     const boxStyle = {
@@ -47,18 +51,65 @@ function Form({ open, handleClose, data, handleShowAlert}) {
     //     // Here you can also add the code to post formData to the backend
     // };
 
-    const handleSubmit = (event) => {
+    const createBookingData = async (bookingData) => {
+        try {
+            const response = await fetch('http://localhost:9000/api/v1/bookings/', {
+                method: 'POST',
+                headers :{
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(bookingData),
+            });
+
+            if (!response.ok){
+                throw new Error(`HTTP error: Status ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log('Booking successful:', result);
+        } catch (error){
+            console.error('Error:', error);
+        }
+    }
+
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    const handleEmailChange = (e) => {
+        const value = e.target.value;
+        setEmail(value);
+        if (!validateEmail(value)) {
+            setEmailError('Invalid email address');
+        } else {
+            setEmailError('');
+        }
+    };
+
+    const handleSubmit =  async (event) => {
         console.log("submit")
         event.preventDefault();
+        const bookingData = {
+            name,
+            contact,
+            email,
+            pax,
+            location: data.location,
+            timing: data.timing,
+            lesson_date: data.lesson_date,
+        };
+        await createBookingData(bookingData);
         // Handle form submission logic here
-        console.log({ name, email });
+        // console.log({ name, email , contact, pax});
+        // console.log({ location: data.location, timing: data.timing, lesson_date: data.lesson_date });
         handleShowAlert();
         handleClose(); // Close the modal after form submission
         // Reset form fields
         setName('');
         setContact('');
         setEmail('');
-        setPax('');
+        setPax(1);
     };
 
     return (
@@ -75,6 +126,9 @@ function Form({ open, handleClose, data, handleShowAlert}) {
                 </h1>
                 <p>
                     {data.timing}
+                </p>
+                <p>
+                    {data.lesson_date}
                 </p>
                 <TextField
                     margin="normal"
@@ -100,6 +154,17 @@ function Form({ open, handleClose, data, handleShowAlert}) {
                     onChange={(e) => setContact(e.target.value)}
                 />
 
+                {/*<TextField*/}
+                {/*    margin="normal"*/}
+                {/*    required*/}
+                {/*    fullWidth*/}
+                {/*    id="email"*/}
+                {/*    label="Email"*/}
+                {/*    name="email"*/}
+                {/*    autoComplete="email"*/}
+                {/*    value={email}*/}
+                {/*    onChange={(e) => setEmail(e.target.value)}*/}
+                {/*/>*/}
                 <TextField
                     margin="normal"
                     required
@@ -109,25 +174,28 @@ function Form({ open, handleClose, data, handleShowAlert}) {
                     name="email"
                     autoComplete="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={handleEmailChange}
+                    error={!!emailError}
+                    helperText={emailError}
                 />
 
-                <FormControl fullWidth margin="normal">
-                    <InputLabel id="pax-label">Number of Participants</InputLabel>
-                    <Select
-                        required
-                        labelId="pax-label"
-                        id="pax"
-                        value={pax}
-                        label="Number of Participants"
-                        onChange={(e) => setPax(e.target.value)}
-                    >
-                        <MenuItem value={1}>1</MenuItem>
-                        <MenuItem value={2}>2</MenuItem>
-                        <MenuItem value={3}>3</MenuItem>
-                        <MenuItem value={4}>4</MenuItem>
-                        <MenuItem value={5}>5</MenuItem>
-                    </Select>
+                <FormControl fullWidth margin="normal" required>
+                    <InputLabel id="pax-label">Participants</InputLabel>
+                    <ParticipantCounter pax={pax} setPax={setPax}/>
+                    {/*<Select*/}
+                    {/*    required*/}
+                    {/*    labelId="pax-label"*/}
+                    {/*    id="pax"*/}
+                    {/*    value={pax}*/}
+                    {/*    label="Number of Participants"*/}
+                    {/*    onChange={(e) => setPax(e.target.value)}*/}
+                    {/*>*/}
+                    {/*    <MenuItem value={1}>1</MenuItem>*/}
+                    {/*    <MenuItem value={2}>2</MenuItem>*/}
+                    {/*    <MenuItem value={3}>3</MenuItem>*/}
+                    {/*    <MenuItem value={4}>4</MenuItem>*/}
+                    {/*    <MenuItem value={5}>5</MenuItem>*/}
+                    {/*</Select>*/}
                 </FormControl>
 
                 <FormSubmitButton fullWidth variant='contained' type='submit'>
