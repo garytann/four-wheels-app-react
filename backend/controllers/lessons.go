@@ -16,6 +16,14 @@ func FindLesson(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"data": lessons})
 }
 
+// GET /lessons/:type
+func FindLessonByType(c *gin.Context) {
+	var lessons []models.Lessons
+	models.DB.Where("type = ?", c.Param("type")).Find(&lessons)
+
+	c.JSON(http.StatusOK, gin.H{"data": lessons})
+}
+
 // POST /lessons
 // Create a new lesson
 func CreateLesson(c *gin.Context) {

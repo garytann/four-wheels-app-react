@@ -31,6 +31,11 @@ func ConnectToDatabase() {
 		return
 	}
 
+	err = db.AutoMigrate(&Bookings{})
+	if err != nil {
+		return
+	}
+
 	DB = db
 
 }
