@@ -12,6 +12,7 @@ function Form({ open, handleClose, data, handleShowAlert}) {
     const [email, setEmail] = useState('');
     const [pax, setPax] = useState(1);
     const [emailError, setEmailError] = useState('');
+    const [contactError, setContactError] = useState('');
 
     const isMobile = useMediaQuery('@media (max-width:768px)');
     const boxStyle = {
@@ -39,17 +40,6 @@ function Form({ open, handleClose, data, handleShowAlert}) {
             backgroundColor: "#B8B42D"
         },
     }));
-
-    // const consolidateFormData = () => {
-    //     const formData = {
-    //         name: name,
-    //         contact: contact,
-    //         email: email,
-    //         pax: pax
-    //     };
-    //     console.log(formData);
-    //     // Here you can also add the code to post formData to the backend
-    // };
 
     const createBookingData = async (bookingData) => {
         try {
@@ -87,9 +77,19 @@ function Form({ open, handleClose, data, handleShowAlert}) {
         }
     };
 
+    const handleContactChange = (e) => {
+        const value = e.target.value;
+        if (/^\d*$/.test(value)) {
+            setContact(value);
+            setContactError('');
+        } else {
+            setContactError('Contact must be a numerical value');
+        }
+    };
+
     const handleSubmit =  async (event) => {
-        console.log("submit")
         event.preventDefault();
+        // Build dictionary for the reuqest body
         const bookingData = {
             name,
             contact,
@@ -100,11 +100,9 @@ function Form({ open, handleClose, data, handleShowAlert}) {
             lesson_date: data.lesson_date,
         };
         await createBookingData(bookingData);
-        // Handle form submission logic here
-        // console.log({ name, email , contact, pax});
-        // console.log({ location: data.location, timing: data.timing, lesson_date: data.lesson_date });
         handleShowAlert();
         handleClose(); // Close the modal after form submission
+
         // Reset form fields
         setName('');
         setContact('');
@@ -130,6 +128,7 @@ function Form({ open, handleClose, data, handleShowAlert}) {
                 <p>
                     {data.lesson_date}
                 </p>
+
                 <TextField
                     margin="normal"
                     required
@@ -142,6 +141,7 @@ function Form({ open, handleClose, data, handleShowAlert}) {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
+
                 <TextField
                     margin="normal"
                     required
@@ -151,20 +151,10 @@ function Form({ open, handleClose, data, handleShowAlert}) {
                     name="contact"
                     autoComplete="contact"
                     value={contact}
-                    onChange={(e) => setContact(e.target.value)}
+                    onChange={handleContactChange}
+                    error={!!contactError}
+                    helperText={contactError}
                 />
-
-                {/*<TextField*/}
-                {/*    margin="normal"*/}
-                {/*    required*/}
-                {/*    fullWidth*/}
-                {/*    id="email"*/}
-                {/*    label="Email"*/}
-                {/*    name="email"*/}
-                {/*    autoComplete="email"*/}
-                {/*    value={email}*/}
-                {/*    onChange={(e) => setEmail(e.target.value)}*/}
-                {/*/>*/}
                 <TextField
                     margin="normal"
                     required
@@ -182,20 +172,6 @@ function Form({ open, handleClose, data, handleShowAlert}) {
                 <FormControl fullWidth margin="normal" required>
                     <InputLabel id="pax-label">Participants</InputLabel>
                     <ParticipantCounter pax={pax} setPax={setPax}/>
-                    {/*<Select*/}
-                    {/*    required*/}
-                    {/*    labelId="pax-label"*/}
-                    {/*    id="pax"*/}
-                    {/*    value={pax}*/}
-                    {/*    label="Number of Participants"*/}
-                    {/*    onChange={(e) => setPax(e.target.value)}*/}
-                    {/*>*/}
-                    {/*    <MenuItem value={1}>1</MenuItem>*/}
-                    {/*    <MenuItem value={2}>2</MenuItem>*/}
-                    {/*    <MenuItem value={3}>3</MenuItem>*/}
-                    {/*    <MenuItem value={4}>4</MenuItem>*/}
-                    {/*    <MenuItem value={5}>5</MenuItem>*/}
-                    {/*</Select>*/}
                 </FormControl>
 
                 <FormSubmitButton fullWidth variant='contained' type='submit'>
