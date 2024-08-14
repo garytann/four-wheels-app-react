@@ -6,3 +6,149 @@
     gap: 100px;
     background-color: var(--mainColor);
 }
+
+.headers{
+    font-size: 5rem;
+    color: var(--goldColor);
+    font-weight: 600;
+}
+
+.title{
+    color: var(--goldColor);
+}
+
+.desc{
+    font-size: 1.5rem;
+    color: var(--secondaryColor);
+    text-align: center;
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.text{
+    font-size: 1rem;
+    color: var(--secondaryColor);
+    text-align:center;
+}
+
+.coachContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.textContainer img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+
+    .text{
+        font-size: 1.2rem;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .desc{
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .text{
+        font-size: 1.2rem;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .desc{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .text{
+        font-size: 1.5rem;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .desc{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .text{
+        font-size: 1.5rem;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .text{
+        font-size: 1.5rem;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    .text{
+        font-size: 1.5rem;
+    }
+    .headers{
+        font-size: 3rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+}
