@@ -64,12 +64,19 @@
     .textContainer {
         font-size: 5rem; /* Adjusted for extra small devices */
     }
+
+    .heroContainer{
+        height: 60vh;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px){
     .textContainer {
         font-size: 5rem; /* Adjusted for extra small devices */
+    }
+    .heroContainer{
+        height: 60vh;
     }
 }
 
@@ -78,6 +85,11 @@
     .textContainer {
         font-size: 6rem; /* Adjusted for small devices */
     }
+
+    .heroContainer{
+        height: 60vh;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -85,11 +97,29 @@
     .textContainer {
         font-size: 7rem; /* Adjusted for small devices */
     }
+
+    .heroContainer{
+        height: 70vh;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px){
     .textContainer {
         font-size: 8rem; /* Adjusted for small devices */
+    }
+
+    .heroContainer{
+        height: 80vh;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    .textContainer {
+        font-size: 8rem; /* Adjusted for small devices */
+    }
+
+    .heroContainer{
+        height: 80vh;
     }
 }

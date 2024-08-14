@@ -119,13 +119,10 @@
 }
 
 .imageButton{
-    padding: 1rem 2rem;
     font-size: 1rem;
     color: var(--goldColor);
     font-weight: 300;
     background-color: var(--mainColor);
-    border: none;
-    border-radius: 35px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     letter-spacing :2px;
@@ -142,38 +139,33 @@
     color: inherit; /* This will make the link have the same color as the text */
 }
 
-/*.image {*/
-/*    width: 400px; !* Adjust the width as needed *!*/
-/*    height: 700px; !* Maintain aspect ratio *!*/
-/*}*/
-
 .title{
     max-width: 300px;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.buttons{
-    display:flex;
-    gap: 15px;
-    color: var(--mainColor);
-    padding-bottom: 30px;
-}
+/*.buttons{*/
+/*    display:flex;*/
+/*    gap: 15px;*/
+/*    color: var(--mainColor);*/
+/*    padding-bottom: 30px;*/
+/*}*/
 
-.button{
-    font-size: 1em;
-    background-color: var(--secondaryColor);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius:6px;
-    padding: 10px;
-    letter-spacing: 2px;
-}
+/*.button{*/
+/*    font-size: 1em;*/
+/*    background-color: var(--secondaryColor);*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s ease;*/
+/*    border-radius:6px;*/
+/*    padding: 10px;*/
+/*    letter-spacing: 2px;*/
+/*}*/
 
-.button:hover {
-    background-color: var(--mainColorLighter);
-}
+/*.button:hover {*/
+/*    background-color: var(--mainColorLighter);*/
+/*}*/
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
@@ -194,7 +186,7 @@
     }
 
     .aboutText{
-        font-size: 1rem;
+        font-size: 2rem;
         max-width: 70%;
         margin: 0 auto;
     }
@@ -372,6 +364,52 @@
         gap: 15px;
     }
 
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    .aboutContainer{
+        /*flex-direction: column-reverse;*/
+        gap: 20px;
+    }
+
+    .aboutHeader{
+        font-size: 1.5rem;
+    }
+
+    .aboutTitle{
+        font-size: 2.2rem;
+        max-width: 45%;
+        margin: 0 auto;
+    }
+
+    .aboutText{
+        font-size: 1.75rem;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .programItems{
+        flex-direction: row;
+    }
+
+    .programHeader{
+        font-size: 1.5rem;
+    }
+
+    .programItems{
+        gap: 70px;
+    }
+
+    .programItems img{
+        width: 330px;
+        height: 330px;
+    }
+
+    .imageItems{
+        font-size: 1.1rem;
+        top: 35%;
+        gap: 15px;
+    }
 }
 
 

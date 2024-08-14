@@ -17,7 +17,7 @@ function About() {
         boxShadow: 'none',
         textTransform: 'none',
         color:'#494b4b',
-        fontSize: isMobile ? '1rem' : isTablet ? '1rem' : '1.5rem',
+        fontSize: isMobile ? '1em' : isTablet ? '1rem' : '1.2rem',
         padding: isMobile ? '1rem 1rem' : isTablet ? '1rem 1rem' : '1rem 1rem',
         border: '1px solid',
         borderRadius:'20px',
@@ -80,8 +80,7 @@ function About() {
                                   <h3>GROUP LESSON</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                       incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
-                                  <BootstrapButton className={styles.imageButton} variant="contained" component={Link}
-                                                   to="/bookings">
+                                  <BootstrapButton className={styles.imageButton} variant="contained" component={Link} to="/bookings">
                                       Book Now
                                   </BootstrapButton>
                               </div>
