@@ -51,18 +51,20 @@
     }
 
     .footerLinks {
+        padding-left: 0;
         text-align:center;
-        gap: 100px;
+        gap: 10px;
         font-size: 0.8rem;
-    }
-
-    .logo {
-        margin: 20px;
     }
 
     .copyright {
+        padding-right: 0;
         text-align: center;
         font-size: 0.8rem;
+    }
+
+    .icon {
+        font-size: 1.5rem; /* Adjust icon size */
     }
 }
 
@@ -147,13 +149,13 @@
     }
 
     .footerLinks {
-        padding-left: 0;
+        padding-left: 10px;
         gap: 10px;
         font-size: 1rem;
     }
 
     .copyright {
-        padding-right: 0;
+        padding-right: 10px;
         text-align: right;
         font-size: 1rem;
     }
