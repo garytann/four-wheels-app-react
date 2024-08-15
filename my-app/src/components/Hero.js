@@ -20,16 +20,16 @@ function Hero() {
         `;
 
     // const isMobile = useMediaQuery('@media (min-width:600px)');
-    const isMobile = useMediaQuery('(max-width:600px)');
-    const isTablet = useMediaQuery('(min-width:768px) and (max-width:1199px)');
+    const isMobile = useMediaQuery('@media (max-width:600px)');
+    const isTablet = useMediaQuery('@media (min-width:768px) and (max-width:1199px)');
 
     const BootstrapButton = styled(Button)({
         animation: `${swipeUp} 1s ease-in-out`,
         boxShadow: 'none',
         textTransform: 'none',
         color:'#EAEAEA',
-        fontSize: isMobile ? '1.5rem' : isTablet ? '1.75rem' : '2rem',
-        padding: isMobile ? '1rem 2rem' : isTablet ? '1rem 3rem' : '1rem 4rem',
+        fontSize: isMobile ? '1em' : isTablet ? '1rem' : '1.2rem',
+        padding: isMobile ? '1rem 2rem' : isTablet ? '1rem 2rem' : '1rem 2rem',
         // fontSize: isMobile ? '1.5rem' : '2rem', // Reduce the font size on mobile
         // padding: isMobile ? '1rem 1rem' : '1rem 2rem', // Reduce the padding on mobile
         border: '1px solid',

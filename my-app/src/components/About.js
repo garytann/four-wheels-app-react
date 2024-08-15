@@ -18,7 +18,7 @@ function About() {
         textTransform: 'none',
         color:'#494b4b',
         fontSize: isMobile ? '1em' : isTablet ? '1rem' : '1.2rem',
-        padding: isMobile ? '1rem 1rem' : isTablet ? '1rem 1rem' : '1rem 1rem',
+        padding: isMobile ? '1rem 2rem' : isTablet ? '1rem 2rem' : '1rem 2rem',
         border: '1px solid',
         borderRadius:'20px',
         lineHeight: 1.5,

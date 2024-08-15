@@ -12,7 +12,7 @@
     display: flex;
     gap: 20px;
     padding-left: 50px;
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
 .footer-links a {
@@ -46,17 +46,18 @@
 @media only screen and (max-width: 600px){
     .footer {
         flex-direction: column;
+        gap:20px;
         align-items: center;
     }
 
     .footerLinks {
         text-align:center;
-        gap: 10px;
+        gap: 100px;
         font-size: 0.8rem;
     }
 
     .logo {
-        margin: 20px 0;
+        margin: 20px;
     }
 
     .copyright {
@@ -74,7 +75,7 @@
 
     .footerLinks {
         padding-left: 0;
-        gap: 10px;
+        gap: 20px;
         font-size: 0.8rem;
     }
 
@@ -85,7 +86,7 @@
     }
 
     .icon{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -105,7 +106,7 @@
     .copyright {
         padding-right: 0;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 
     .icon{
@@ -148,13 +149,13 @@
     .footerLinks {
         padding-left: 0;
         gap: 10px;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .copyright {
         padding-right: 0;
         text-align: right;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .icon{

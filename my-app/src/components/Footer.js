@@ -10,7 +10,7 @@ const Footer = () => {
             <div className={styles.footerLinks}>
                 <Link to="/about">About</Link>
                 <Link to="/lessons">Lessons</Link>
-                <Link to="/contact">Contact</Link>
+                {/*<Link to="/contact">Contact</Link>*/}
                 <Link to="/bookings">Bookings</Link>
             </div>
             <div className={styles.socialMediaLinks}>
@@ -20,7 +20,7 @@ const Footer = () => {
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.icon}>
                     <FaFacebook/>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.icon}>
+                <a href="https://www.instagram.com/fourwheels.sports/" target="_blank" rel="noopener noreferrer" className={styles.icon}>
                     <FaInstagram/>
                 </a>
             </div>
