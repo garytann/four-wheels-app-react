@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   db:
+    container_name: db
     image: mysql:9.0.0
     restart: always
     environment:
@@ -20,6 +21,21 @@ services:
       # Where our data will be persisted
     volumes:
       - my-db:/var/lib/mysql
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./my-app
+      dockerfile: Dockerfile.prod
+    volumes:
+      - /app/node_modules
+      - ./my-app:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - '3000:80'
+    depends_on:
+      - db
 # Names our volume
 volumes:
   my-db:
